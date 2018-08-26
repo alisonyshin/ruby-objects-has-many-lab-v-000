@@ -7,11 +7,11 @@ attr_accessor :name
     @posts = []
   end
   
-  def songs
+  def posts
     @posts
   end
  
-  def add_song(existing_post)
+  def add_post(existing_post)
     existing_post.author = self
     @posts << existing_post
     @@posts << @posts
@@ -19,13 +19,13 @@ attr_accessor :name
   
   def add_post_by_name(new_post)
     post = Post.new(new_post)
-    post.artist = self
-    @songs << song
-    @@songs << @songs
+    post.author = self
+    @posts << post
+    @@posts << @posts
   end  
   
-  def self.song_count
-    @@songs.flatten.length
+  def self.post_count
+    @@posts.flatten.length
   end
   
 end
