@@ -19,11 +19,11 @@ attr_accessor :name, :songs
   end  
   
   def songs
-    Song.songs.select {|song| song.artist == self}
+    Song.all.select {|song| song.artist == self}
   end
   
   def self.song_count
-    @@songs.count
+    Song.all.count
   end
   
 end
