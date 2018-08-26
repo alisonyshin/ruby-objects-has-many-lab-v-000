@@ -10,14 +10,8 @@ class Post
   def self.all 
     @@all
   end
-  
-  def title
-    @title
-  end
-  
-  def author=(author_name)
-    @author = author_name
-  end
+
+
   
   def author_name
     if @author == nil
