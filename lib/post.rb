@@ -15,15 +15,15 @@ class Post
     @name
   end
   
-  def artist=(artist_name)
-    @artist = artist_name
+  def author=(author_name)
+    @author = author_name
   end
   
-  def artist_name
-    if @artist == nil
+  def author_name
+    if @author == nil
       nil
     else
-      @artist.name
+      @author.name
     end
   end
   
