@@ -18,10 +18,6 @@ attr_accessor :name, :songs
     @@songs << existing_song
   end  
   
-  def self.all
-    @@songs
-  end
-  
   def songs
     Song.all.select {|song| song.artist == self}
   end
