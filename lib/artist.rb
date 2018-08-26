@@ -19,7 +19,7 @@ attr_accessor :name, :songs
   end  
   
   def songs
-    Song.songs.map {|song| song.artist == self}
+    Song.songs.select {|song| song.artist == self}
   end
   
   def self.song_count
